@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # Load model and columns
 model = pickle.load(open("model.pkl", "rb"))
-columns = pickle.load(open("columns.pkl", "rb"))
+# columns = pickle.load(open("columns.pkl", "rb"))
 
 @app.route('/')
 def home():
