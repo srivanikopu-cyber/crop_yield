@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Yield Prediction</title>
+</head>
+<body>
+
+<h1>Crop Yield Prediction</h1>
+
+<form action="/predict" method="post">
+
+    <input type="text" name="temperature" placeholder="Temperature" required><br><br>
+    <input type="text" name="rainfall" placeholder="Rainfall" required><br><br>
+    <input type="text" name="humidity" placeholder="Humidity" required><br><br>
+
+    <label>Soil Type:</label>
+    <select name="soil">
+        <option value="Clay">Clay</option>
+        <option value="Sandy">Sandy</option>
+        <option value="Loamy">Loamy</option>
+    </select><br><br>
+
+    <label>Weather Condition:</label>
+    <select name="weather">
+        <option value="Sunny">Sunny</option>
+        <option value="Rainy">Rainy</option>
+        <option value="Cloudy">Cloudy</option>
+    </select><br><br>
+
+    <label>Crop Type:</label>
+    <select name="crop">
+        <option value="Wheat">Wheat</option>
+        <option value="Rice">Rice</option>
+        <option value="Maize">Maize</option>
+    </select><br><br>
+
+    <button type="submit">Predict</button>
+
+</form>
+
+<h2>{{ prediction_text }}</h2>
+
+</body>
+</html>
+
